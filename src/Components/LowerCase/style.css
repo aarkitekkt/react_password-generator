@@ -1,0 +1,12 @@
+#lowercase {
+    background-color: blue;
+    width: 100%;
+    height: 100vh;
+    margin: 0px;
+}
+
+#lowercaseTitle {
+    margin: 0px;
+ text-align: center;
+ line-height: 100vh;
+}

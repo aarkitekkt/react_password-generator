@@ -1,24 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./index.css";
+import Landing from "./Components/Landing";
+import LowerCase from "./Components/LowerCase";
+import UpperCase from './Components/UpperCase';
+import Numbers from "./Components/Numbers";
+import Special from "./Components/Special";
+import Password from "./Components/Password";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Landing />
+      <LowerCase />
+      <UpperCase />
+      <Numbers />
+      <Special />
+      <Password />
     </div>
   );
 }

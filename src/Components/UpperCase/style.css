@@ -1,0 +1,12 @@
+#uppercase {
+    background-color: green;
+    width: 100%;
+    height: 100vh;
+    margin: 0px;
+}
+
+#uppercaseTitle {
+    margin: 0px;
+    text-align: center;
+    line-height: 100vh;
+}
