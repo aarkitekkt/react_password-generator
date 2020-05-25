@@ -1,19 +1,19 @@
 import React from "react";
 import "./style.css";
 
-function Landing() {
+function Length() {
     return (
-        <div id="landing">
-            <div id="landingContent">
+        <div id="length">
+            <div id="lengthContent">
                 <div className="d-flex justify-content-center">
-                    <h1 id="landingTitle">Password Generator</h1>
+                    <h1 id="lengthTitle">How long is your password?</h1>
                 </div>
                 <div className="d-flex justify-content-center">
-                    <button className="btn btn-outline-dark">Begin</button>
+                    <button className="btn btn-outline-dark">Nice</button>
                 </div>
             </div>
         </div>
     )
 }
 
-export default Landing;
+export default Length;

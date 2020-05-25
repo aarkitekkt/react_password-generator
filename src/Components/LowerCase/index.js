@@ -4,7 +4,15 @@ import "./style.css";
 function LowerCase() {
     return (
         <div id="lowercase">
-            <h1 id="lowercaseTitle">Lowercase?</h1>
+            <div id="lowercaseContent">
+                <div className="d-flex justify-content-center">
+                    <h1 id="lowercaseTitle">Want lowercase letters?</h1>
+                </div>
+                <div className="d-flex justify-content-center">
+                    <button className="btn btn-outline-dark">yea</button>
+                    <button className="btn btn-outline-dark">NAH</button>
+                </div>
+            </div>
         </div>
     )
 }

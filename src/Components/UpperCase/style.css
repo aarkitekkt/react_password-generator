@@ -5,8 +5,9 @@
     margin: 0px;
 }
 
-#uppercaseTitle {
-    margin: 0px;
-    text-align: center;
-    line-height: 100vh;
+#uppercaseContent{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
