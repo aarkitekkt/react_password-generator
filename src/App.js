@@ -8,16 +8,36 @@ import Numbers from "./Components/Numbers";
 import Special from "./Components/Special";
 import Password from "./Components/Password";
 
+
 function App() {
   return (
     <div className="App">
-      <Landing />
-      <Length />
-      <LowerCase />
-      <UpperCase />
-      <Numbers />
-      <Special />
-      <Password />
+      <Landing
+        to="length"
+      />
+      <Length
+        id="length"
+        to="lowercase"
+      />
+      <LowerCase
+        id="lowercase"
+        to="uppercase"
+      />
+      <UpperCase
+        id="uppercase"
+        to="numbers"
+      />
+      <Numbers
+        id="numbers"
+        to="special"
+      />
+      <Special
+        id="special"
+        to="password"
+      />
+      <Password
+        id="password"
+        to="length" />
     </div>
   );
 }

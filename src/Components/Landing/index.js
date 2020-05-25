@@ -1,7 +1,9 @@
 import React from "react";
 import "./style.css";
+import { Link } from 'react-scroll'
 
-function Landing() {
+
+function Landing(props) {
     return (
         <div id="landing">
             <div id="landingContent">
@@ -9,7 +11,7 @@ function Landing() {
                     <h1 id="landingTitle">Password Generator</h1>
                 </div>
                 <div className="d-flex justify-content-center">
-                    <button className="btn btn-outline-dark">Begin</button>
+                    <Link to={props.to} smooth={true} duration={500} className="btn btn-outline-dark">Begin</Link>
                 </div>
             </div>
         </div>
