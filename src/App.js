@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./index.css";
 import Landing from "./Components/Landing";
 import Length from "./Components/Length";
-import LowerCase from "./Components/LowerCase";
 import UpperCase from './Components/UpperCase';
 import Numbers from "./Components/Numbers";
 import Special from "./Components/Special";
@@ -10,6 +9,15 @@ import Password from "./Components/Password";
 
 
 function App() {
+  const [passwordState, setPasswordState] = useState(
+    {
+      length: 8,
+      uppercase: false,
+      numbers: false,
+      special: false
+    }
+  );
+
   return (
     <div className="App">
       <Landing
@@ -17,10 +25,6 @@ function App() {
       />
       <Length
         id="length"
-        to="lowercase"
-      />
-      <LowerCase
-        id="lowercase"
         to="uppercase"
       />
       <UpperCase
