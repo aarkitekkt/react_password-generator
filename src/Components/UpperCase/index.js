@@ -10,8 +10,8 @@ function UpperCase(props) {
                     <h1 id="uppercaseTitle">WHAT ABOUT UPPERCASE?</h1>
                 </div>
                 <div className="d-flex justify-content-center">
-                    <Link to={props.to} smooth={true} duration={500} className="btn btn-outline-dark">Yes</Link>
-                    <Link to={props.to} smooth={true} duration={500} className="btn btn-outline-dark">No</Link>
+                    <Link id={props.yesId} to={props.to} smooth={true} duration={500} className="btn btn-outline-dark" onClick={props.clickYes}>Yes</Link>
+                    <Link id={props.noId} to={props.to} smooth={true} duration={500} className="btn btn-outline-dark" onClick={props.clickNo}>No</Link>
                 </div>
             </div>
         </div>

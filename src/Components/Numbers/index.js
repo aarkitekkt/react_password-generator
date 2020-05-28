@@ -10,8 +10,8 @@ function Numbers(props) {
                     <h1 id="numbersTitle">You good with numbers?</h1>
                 </div>
                 <div className="d-flex justify-content-center">
-                    <Link to={props.to} smooth={true} duration={500} className="btn btn-outline-dark">Yes</Link>
-                    <Link to={props.to} smooth={true} duration={500} className="btn btn-outline-dark">No</Link>
+                    <Link to={props.to} smooth={true} duration={500} className="btn btn-outline-dark" onClick={props.clickYes}>Yes</Link>
+                    <Link to={props.to} smooth={true} duration={500} className="btn btn-outline-dark" onClick={props.clickNo}>No</Link>
                 </div>
             </div>
         </div>
