@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import "./index.css";
 import Landing from "./Components/Landing";
 import Length from "./Components/Length";
@@ -10,6 +10,7 @@ import Password from "./Components/Password";
 
 function App() {
 
+  const [password, setPassword] = useState("password")
 
   const [passwordState, setPasswordState] = useState(
     {
@@ -19,6 +20,40 @@ function App() {
       special: false
     }
   );
+
+  useEffect(() => {
+    var pw = ""
+    var charOptions = {
+      numbers: "0123456789",
+      special: "#$%&'()*+,-./:;<=>?@^_`{|}~",
+      upper: "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    }
+    var characters = "abcdefghijklmnopqrstuvwxyz";
+
+    if (passwordState.numbers === true) {
+      characters += charOptions.numbers;
+    }
+    if (passwordState.special === true) {
+      characters += charOptions.special;
+    }
+    if (passwordState.uppercase === true) {
+      characters += charOptions.upper;
+    }
+
+    var createPassword = () => {
+      for (var i = 0; i < passwordState.length; i++) {
+        pw += characters.charAt(Math.floor(Math.random() * characters.length));
+      }
+      setPassword(pw);
+    }
+
+    createPassword();
+
+    console.log("your password is " + pw);
+
+
+
+  }, [passwordState])
 
   function updateLength() {
     console.log("nice click, bro!");
@@ -92,7 +127,8 @@ function App() {
       />
       <Password
         id="password"
-        to="length" />
+        to="length"
+        password={password} />
     </div>
   );
 }
