@@ -11,6 +11,7 @@ import Password from "./Components/Password";
 function App() {
 
   const [password, setPassword] = useState("password")
+  const [generate, setGenerate] = useState({});
 
   const [passwordState, setPasswordState] = useState(
     {
@@ -46,52 +47,46 @@ function App() {
       }
       setPassword(pw);
     }
-
     createPassword();
+  }, [passwordState, generate])
 
-    console.log("your password is " + pw);
-
-
-
-  }, [passwordState])
-
-  function updateLength() {
-    console.log("nice click, bro!");
+  function copyPass() {
+    password.select();
+    password.setSelectionRange(0, 99999);
+    password.execCommand("copy");
+    alert("Password copied to clipboard");
   }
 
+  function regenerate() {
+    setGenerate({});
+  }
 
+  // Functions to update password state depending on user selections.
   function handleChange(event) {
-    console.log("you changed the number!")
     setPasswordState({ ...passwordState, length: parseInt(event.target.value) });
   }
 
   function setUppercaseTrue() {
-    console.log("uppercase affirmative");
     setPasswordState({ ...passwordState, uppercase: true });
   }
 
   function setUppercaseFalse() {
-    console.log("uppercase negatory");
     setPasswordState({ ...passwordState, uppercase: false });
   }
 
   function setNumbersTrue() {
-    console.log("numbers affirmative");
     setPasswordState({ ...passwordState, numbers: true });
   }
 
   function setNumbersFalse() {
-    console.log("numbers negatory");
     setPasswordState({ ...passwordState, numbers: false });
   }
 
   function setSpecialTrue() {
-    console.log("special affirmative");
     setPasswordState({ ...passwordState, special: true });
   }
 
   function setSpecialFalse() {
-    console.log("special negatory");
     setPasswordState({ ...passwordState, special: false });
   }
 
@@ -104,7 +99,6 @@ function App() {
         id="length"
         to="uppercase"
         value={passwordState.length}
-        onClick={updateLength}
         onChange={handleChange}
       />
       <UpperCase
@@ -128,6 +122,8 @@ function App() {
       <Password
         id="password"
         to="length"
+        onClick={copyPass}
+        reGen={regenerate}
         password={password} />
     </div>
   );

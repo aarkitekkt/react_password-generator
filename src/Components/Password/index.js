@@ -13,7 +13,8 @@ function Password(props) {
                     <h3>{props.password}</h3>
                 </div>
                 <div className="d-flex justify-content-center">
-                    <button className="btn btn-outline-dark">copy</button>
+                    <button className="btn btn-outline-dark" onClick={props.onClick}>copy</button>
+                    <button className="btn btn-outline-dark" onClick={props.reGen}>re-gen</button>
                     <Link to={props.to} smooth={true} duration={500} className="btn btn-outline-dark">Start Over</Link>
                 </div>
             </div>
