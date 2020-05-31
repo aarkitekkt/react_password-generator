@@ -12,6 +12,7 @@ function App() {
 
   const [password, setPassword] = useState("password")
   const [generate, setGenerate] = useState({});
+  const [copied, setCopied] = useState(false)
 
   const [passwordState, setPasswordState] = useState(
     {
@@ -49,13 +50,6 @@ function App() {
     }
     createPassword();
   }, [passwordState, generate])
-
-  function copyPass() {
-    password.select();
-    password.setSelectionRange(0, 99999);
-    password.execCommand("copy");
-    alert("Password copied to clipboard");
-  }
 
   function regenerate() {
     setGenerate({});
@@ -122,9 +116,11 @@ function App() {
       <Password
         id="password"
         to="length"
-        onClick={copyPass}
         reGen={regenerate}
-        password={password} />
+        password={password}
+        text={password}
+        onCopy={() => setCopied(true)}
+      />
     </div>
   );
 }
