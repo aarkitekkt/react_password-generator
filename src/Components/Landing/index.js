@@ -6,7 +6,6 @@ import { Link } from 'react-scroll'
 function Landing(props) {
     return (
         <div id="landing">
-
             <div id="landingContent">
                 <div id="animationContainer" className="mx-auto mt-0 p-0">
                     <h1 id="landingBackground">*******</h1>

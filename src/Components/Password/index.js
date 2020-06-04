@@ -12,6 +12,7 @@ function Password(props) {
                 </div>
                 <div className="d-flex justify-content-center my-4">
                     <input
+                        className="text-center"
                         value={props.password}
                     />
                 </div>
