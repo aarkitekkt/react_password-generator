@@ -5,6 +5,10 @@
     margin: 0px;
 }
 
+#passwordBox {
+    width: 200px;
+}
+
 #passwordContent {
     position: relative;
     top: 50%;

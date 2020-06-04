@@ -16,7 +16,7 @@ function App() {
 
   const [passwordState, setPasswordState] = useState(
     {
-      length: 8,
+      length: 15,
       uppercase: false,
       numbers: false,
       special: false
@@ -94,6 +94,7 @@ function App() {
         to="uppercase"
         value={passwordState.length}
         onChange={handleChange}
+        length={passwordState.length}
       />
       <UpperCase
         id="uppercase"

@@ -11,7 +11,10 @@ function Length(props) {
                     <h1 id="lengthTitle" className="text-center mb-3">Password Length?</h1>
                 </div>
                 <div className="d-flex justify-content-center">
-                    <input id="lengthInput" placeholder="(8-128)" type="text" onChange={props.onChange} className="form-control bg-transparent mb-4 border-0 text-center" />
+                    <input id="lengthInput" type="range" min="8" max="22" value={props.value} onChange={props.onChange} className="slider my-5" />
+                </div>
+                <div className="d-flex justify-content-center mb-3">
+                    <h1 id="lengthValue">{props.length}</h1>
                 </div>
                 <div className="d-flex justify-content-center">
                     <Link to={props.to} smooth={true} duration={500} id="niceButton" className="btn" onClick={props.onClick}>Nice</Link>

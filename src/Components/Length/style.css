@@ -5,8 +5,34 @@
  margin: 0;  
 }
 
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 40px; /* Specified height */
+  background: transparent; /* Grey background */
+  outline: none;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px #2E4460;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background: #C7CEDB;
+  cursor: pointer;
+}
+
 #lengthTitle {
   color: #C7CEDB
+}
+
+#lengthValue {
+  color: #C7CEDB;
+  font-size: 50px;
 }
 
 #lengthContent {    
@@ -17,9 +43,8 @@
 }
 
 #lengthInput {
-  width: 250px;
-  font-size: 70px;
-  color: #C7CEDB;
+  width: 75vw;
+ 
 }
 
 #niceButton {
