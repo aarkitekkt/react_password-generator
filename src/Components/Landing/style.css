@@ -1,8 +1,55 @@
 #landing {
- background-color: red; 
+ background-color: #2E3532; 
  width: 100%;
  height: 100vh;
  margin: 0;  
+}
+
+#animationContainer {
+  width: 75%
+}
+
+#landingBackground {
+  color: transparent;
+  font-size: 25vw;
+  text-shadow: 0px 0px 5px #242424; 
+  position: relative;
+  left: 0%;
+  animation: type 5s steps(14);
+  animation-iteration-count: 2;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@keyframes type {
+  0% {
+    width: 0ch;
+  }
+  30% {
+    width: 5ch;
+  }
+  60% {
+    width: 2ch;
+  }
+  80% {
+    width: 5ch;
+  }
+  100% {
+    width: 0ch;
+  }
+}
+
+#landingTitle {
+  color: #C7CEDB;
+}
+
+#beginButton {
+  color: #C7CEDB;
+  border: #C7CEDB 2px solid;
+}
+
+#beginButton:hover {
+  background-color: #94849B;
 }
 
 #landingContent {    

@@ -6,12 +6,17 @@ import { Link } from 'react-scroll'
 function Landing(props) {
     return (
         <div id="landing">
+
             <div id="landingContent">
-                <div className="d-flex justify-content-center">
-                    <h1 id="landingTitle">Password Generator</h1>
+                <div id="animationContainer" className="mx-auto mt-0 p-0">
+                    <h1 id="landingBackground">*******</h1>
                 </div>
                 <div className="d-flex justify-content-center">
-                    <Link to={props.to} smooth={true} duration={500} className="btn btn-outline-dark">Begin</Link>
+
+                    <h1 id="landingTitle" className="text-center mb-5">Password Generator</h1>
+                </div>
+                <div className="d-flex justify-content-center">
+                    <Link to={props.to} smooth={true} duration={500} id="beginButton" className="btn">Begin</Link>
                 </div>
             </div>
         </div>

@@ -1,8 +1,12 @@
 .length {
- background-color: aqua; 
+ background-color: #3D5A80; 
  width: 100%;
  height: 100vh;
  margin: 0;  
+}
+
+#lengthTitle {
+  color: #C7CEDB
 }
 
 #lengthContent {    
@@ -13,5 +17,16 @@
 }
 
 #lengthInput {
-  width: 125px;
+  width: 250px;
+  font-size: 70px;
+  color: #C7CEDB;
+}
+
+#niceButton {
+  color: #C7CEDB;
+  border: #C7CEDB solid 2px;
+}
+
+#niceButton:hover {
+  background-color: #7E9181;
 }
